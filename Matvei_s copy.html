@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Calculator</title>
+</head>
+<body>
+<form name="calculator">
+<table>
+<tr>
+<td><input type="button" name="clear" value="C" id="cc" onclick="calculator.display.value = ''"></td>
+<td colspan="5"><input type="text" name="display" id="display" disabled></td>
+</tr>
+<tr>
+<td><input type="button" name="seven" value="7" onclick="calculator.display.value += '7'"></td>
+<td><input type="button" name="eight" value="8" onclick="calculator.display.value += '8'"></td>
+<td><input type="button" name="nine" value="9" onclick="calculator.display.value += '9'"></td>
+<td><input type="button" class="odds1" name="plus" value="+" onclick="calculator.display.value += '+'"></td>
+</tr>
+<tr>
+<td><input type="button" name="four" value="4" onclick="calculator.display.value += '4'"></td>
+<td><input type="button" name="five" value="5" onclick="calculator.display.value += '5'"></td>
+<td><input type="button" name="six" value="6" onclick="calculator.display.value += '6'"></td>
+<td><input type="button" class="odds1" name="minus" value="-" onclick="calculator.display.value += '-'"></td>
+</tr>
+<tr>
+<td><input type="button" name="one" value="1" onclick="calculator.display.value += '1'"></td>
+<td><input type="button" name="two" value="2" onclick="calculator.display.value += '2'"></td>
+<td><input type="button" name="three" value="3" onclick="calculator.display.value += '3'"></td>
+<td><input type="button" class="odds1" name="divide" value="/" onclick="calculator.display.value += '/'"></td>
+</tr>
+<tr>
+<td><input type="button" name="zero" value="0" onclick="calculator.display.value += '0'"></td>
+<td><input type="button" name="dot" value="." onclick="calculator.display.value += '.'"></td>
+<td><input type="button" name="equal" value="=" id="equal1" onclick="calculator.display.value = eval(calculator.display.value)"></td>
+<td><input type="button" class="odds1" name="multiply" value="*" onclick="calculator.display.value += '*'"></td>
+</tr>
+</table>
+</form>
+</body>
+</html>
+
+<style>
+    table {
+        border: 10px solid #9ed3e8;
+        background-color: #9ed3e8;
+        margin: auto;
+        margin-top: 220px;
+        box-shadow: 0 5px #189ee1;
+    }
+    input[type="button" ] {
+        width: 70px;
+        height: 50px;
+        font-size: 20px;
+        margin: 2px;
+        background-color: #ffffff;
+        color: rgb(78, 78, 78);
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 5px #79a7ba;
+    }
+    input[type="button"]:hover {
+        background-color: #858585;
+    }
+    input[type="button"]:active {
+        background-color: #ff7878;
+        box-shadow: 0 3px #535353;
+        transform: translateY(2px);
+    }
+    input[type="text"] {
+        width: 220px;
+        height: 45px;
+        font-size: 20px;
+        text-align: right;
+        color: #ffffff;
+        margin: 2px;
+        background-color: #7ca7ba;
+        border-radius: 5px;
+        box-shadow: 5 0px #678898;
+    }
+    #cc {
+        background-color: #fe9ea9;
+        color: #ffffff;
+        box-shadow: 0 5px #fd7a89;
+    }
+    #equal1 {
+        background-color: #f2fe98;    
+        }
+    table .odds1 {
+        background-color: #fff0f5;
+        }
+    </style>
